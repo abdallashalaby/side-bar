@@ -1,49 +1,65 @@
+function show_content1() {
+  document.getElementById('con').innerText = 'content ' + '1'
+}
+function show_content2() {
+  document.getElementById('con').innerText = 'content ' + '2'
+}
+function show_content3() {
+  document.getElementById('con').innerText = 'content ' + '3'
+}
+function show_content4() {
+  document.getElementById('con').innerText = 'content ' + '4'
+}
+
 const links = [
   {
     text: 'page 1',
-    href: 'http://127.0.0.1:5500/index1.html',
+    href: '',
   },
   {
     text: 'page 2',
-    href: 'http://127.0.0.1:5500/index2.html',
+    href: '',
   },
   {
     text: 'page 3',
-    href: 'http://127.0.0.1:5500/index3.html',
+    href: '',
   },
   {
     text: 'contact',
-    href: 'http://127.0.0.1:5500/contact.html',
+    href: '',
   },
-
-  // add more links
 ]
 const sidebar = document.getElementById('sidebar')
 
-// put these steps in a loop
 for (var i = 0; i < 4; i++) {
-  let link = document.createElement('a')
-  link.innerHTML = links[i].text
-  link.setAttribute('href', links[i].href)
-  link.id = i
-  sidebar.appendChild(link)
+  sidebar.innerHTML +=
+    `<a href="#" id="item` + i + `" onclick="show_content` + (i + 1) + `()">` + links[i].text + `</a>`
 }
-// let links = document.querySelector('sidebar');
-let url = window.location.href
-let fir = links[0].href
-let sec = links[1].href
-let thi = links[2].href
-let con = links[3].href
-
-if (fir == url) {
-  document.getElementById('0').classList.add('active')
+document.getElementById('item0').onclick = function () {
+  document.getElementById('con').innerText = 'content ' + '1'
+  document.getElementById('item3').style.color = '#aaa'
+  document.getElementById('item1').style.color = '#aaa'
+  document.getElementById('item2').style.color = '#aaa'
+  document.getElementById('item0').style.color = 'red'
 }
-if (sec == url) {
-  document.getElementById('1').classList.add('active')
+document.getElementById('item1').onclick = function () {
+  document.getElementById('con').innerText = 'content ' + '2'
+  document.getElementById('item0').style.color = '#aaa'
+  document.getElementById('item3').style.color = '#aaa'
+  document.getElementById('item2').style.color = '#aaa'
+  document.getElementById('item1').style.color = 'red'
 }
-if (thi == url) {
-  document.getElementById('2').classList.add('active')
+document.getElementById('item2').onclick = function () {
+  document.getElementById('con').innerText = 'content ' + '3'
+  document.getElementById('item0').style.color = '#aaa'
+  document.getElementById('item1').style.color = '#aaa'
+  document.getElementById('item3').style.color = '#aaa'
+  document.getElementById('item2').style.color = 'red'
 }
-if (con == url) {
-  document.getElementById('3').classList.add('active')
+document.getElementById('item3').onclick = function () {
+  document.getElementById('con').innerHTML = 'content ' + 'contact page'
+  document.getElementById('item0').style.color = '#aaa'
+  document.getElementById('item1').style.color = '#aaa'
+  document.getElementById('item2').style.color = '#aaa'
+  document.getElementById('item3').style.color = 'red'
 }

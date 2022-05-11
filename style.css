@@ -1,9 +1,23 @@
+#layout {
+    display: flex;
+}
+
+#main {
+    background-color: lightseagreen;
+    margin: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 100%;
+    padding: 10px;
+}
+
 #sidebar {
     border: 1px solid black;
     border-radius: 5px;
     width: 200px;
     margin: 15px 5px;
     padding: 5px;
+    background-color: lightgreen;
 }
 
 #sidebar a {
