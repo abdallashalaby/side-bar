@@ -1,0 +1,15 @@
+.sidebar {
+    width: 300px;
+    height: 300px;
+    margin-left: 1200px;
+    margin-top: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+.active {
+    color: red;
+}
