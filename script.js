@@ -30,7 +30,6 @@ for (var i = 0; i < 4; i++) {
 }
 // let links = document.querySelector('sidebar');
 let url = window.location.href
-alert(url)
 let fir = links[0].href
 let sec = links[1].href
 let thi = links[2].href

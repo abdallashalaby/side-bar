@@ -1,10 +1,21 @@
-.sidebar {
-    width: 300px;
+#sidebar {
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 200px;
+    margin: 15px 5px;
+    padding: 5px;
 }
 
-a {
+#sidebar a {
+    display: block;
+    padding: 5px;
+    border-bottom: 1px solid #aaa;
     text-decoration: none;
     color: grey;
+}
+
+#sidebar a:last-child {
+    border-bottom: 0;
 }
 
 .active {
