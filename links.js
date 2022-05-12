@@ -1,19 +1,18 @@
 const links = [
   {
     text: 'page 1',
-    href: '#',
+    href: 'page-1',
   },
   {
     text: 'page 2',
-    href: '#',
+    href: 'page-2',
   },
   {
     text: 'page 3',
-    href: '#',
+    href: 'page-3',
   },
   {
     text: 'contact',
-    href: '#',
+    href: 'page-4',
   },
 ]
-// export links;
